@@ -1,16 +1,16 @@
-const elementoParaInserirLivros = document.getElementById("livros");
+const elementToInsertBooks = document.getElementById("livros");
 
-function exibirLivrosNaTela(ListaDeLivros) {
-    ListaDeLivros.forEach((livro) => {
-        elementoParaInserirLivros.innerHTML += `<div class="livro">
-      <img class="livro__imagens" src="${livro.imagem}" alt="${livro.alt}" />
+function displayBooksOnScreen(bookList) {
+    bookList.forEach((book) => {
+        elementToInsertBooks.innerHTML += `<div class="livro">
+      <img class="livro__imagens" src="${book.imagem}" alt="${book.alt}" />
       <h2 class="livro__titulo">
-        ${livro.titulo}
+        ${book.titulo}
       </h2>
-      <p class="livro__descricao">${livro.autor}</p>
-      <p class="livro__preco" id="preco">R$ ${livro.preco}</p>
+      <p class="livro__descricao">${book.autor}</p>
+      <p class="livro__preco" id="preco">R$ ${book.preco.toFixed(2)}</p>
       <div class="tags">
-        <span class="tag">${livro.categoria}</span>
+        <span class="tag">${book.categoria}</span>
       </div>
     </div>`;
     });
