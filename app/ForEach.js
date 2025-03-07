@@ -1,6 +1,7 @@
 const elementToInsertBooks = document.getElementById("livros");
 
 function displayBooksOnScreen(bookList) {
+    elementToInsertBooks.innerHTML = "";
     bookList.forEach((book) => {
         elementToInsertBooks.innerHTML += `<div class="livro">
       <img class="livro__imagens" src="${book.imagem}" alt="${book.alt}" />
